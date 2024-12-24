@@ -1,0 +1,291 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Высота экрана */
+    display: flex;
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: center; /* Вертикальное центрирование */
+    flex-direction: column; /* Все элементы расположены по вертикали */
+}
+
+/* Стили для баннера */
+.banner-container {
+    background-color: #6D7D9D;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px; /* Фиксированная ширина */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Добавляем тень для эффекта */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Исходное состояние для анимации */
+.animate {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+/* Анимация при активации */
+.animate-start {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Стили для кнопки */
+#animate-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#animate-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#animate-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Стили для слайдера */
+.slider {
+    position: relative;
+    width: 50%;
+    height: 300px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 24px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: none; /* Скрываем все слайды */
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.slide.active {
+    display: flex; /* Показываем активный слайд */
+}
+
+/* Стили для кнопок "Назад" и "Вперед" */
+#prev-btn, #next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#prev-btn {
+    left: 20px;
+}
+
+#next-btn {
+    right: 20px;
+}
+
+#prev-btn:hover, #next-btn:hover {
+    transform: translateY(-50%) scale(1.2);
+}
+
+
+/* Меню */
+.menu {
+    background-color: #6D7D9D;
+    padding: 10px;
+    margin-top: 20px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    position: relative;
+    margin-right: 25px;
+}
+
+.menu ul li a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* Стили для слайдера */
+.slider {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    margin: 20px auto;
+    background-color: #e74c3c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+}
+
+/* Стили для кнопок "Назад" и "Вперед" */
+#prev-btn, #next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#prev-btn {
+    left: 20px;
+}
+
+#next-btn {
+    right: 20px;
+}
+
+#prev-btn:hover, #next-btn:hover {
+    transform: translateY(-50%) scale(1.2);
+}
+
+/* Стили для формы */
+form {
+    margin-top: 20px;
+    width: 400px;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: calc(100% - 20px); /* Увеличиваем ширину */
+}
+
+#submit-btn {
+    background-image: linear-gradient(135deg, #6e8efb, #a777e3);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#submit-btn:hover {
+    background-image: linear-gradient(135deg, #5d78de, #8a58c9);
+    transform: translateY(-2px);
+}
+
+#submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для сообщения об отправке */
+#success-message {
+    color: #2ecc71;
+    font-size: 18px;
+    margin-top: 20px
+
+    /* @media для адаптивности */
+@media (max-width: 1200px) {
+    /* Для ноутбуков */
+    .slider {
+        width: 70%;
+        height: 250px;
+    }
+    
+    .banner-container, form {
+        width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Для планшетов */
+    .slider {
+        width: 80%;
+        height: 200px;
+    }
+
+    .banner-container, form {
+        width: 300px;
+    }
+
+    #prev-btn, #next-btn {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Для телефонов */
+    .slider {
+        width: 100%;
+        height: 150px;
+    }
+
+    .banner-container, form {
+        width: 250px;
+        padding: 20px;
+    }
+
+    #prev-btn, #next-btn {
+        font-size: 1.2rem;
+    }
+    
+    input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #submit-btn {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+}
