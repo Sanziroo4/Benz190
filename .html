@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
+    <title>Интерактивный Баннер</title>
+</head>
+<body>
+    <!-- Баннер -->
+    <div class="banner-container">
+        <h1>Добро пожаловать!</h1>
+        <p>Нажмите кнопку для анимации.</p>
+        <button id="animate-btn">Анимировать</button>
+    </div>
+
+    <!-- Меню -->
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="https://ru.wikipedia.org/wiki/Mercedes-Benz_W201">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <!-- Слайдер -->
+ <div class="slider">
+    <div class="slide" id="slide-1">
+        <img src="https://avatars.mds.yandex.net/get-vertis-journal/3934100/1214096.png_1703601316020/orig" alt="Слайд 1" />
+    </div>
+    <div class="slide" id="slide-2">
+        <img src="https://images.drive.ru/i/0/637396ccb66384042ae78f5b.jpg" alt="Слайд 2" />
+    </div>
+    <div class="slide" id="slide-3">
+        <img src="https://avatars.mds.yandex.net/get-vertis-journal/3934100/05.jpg_1640671169867/orig" alt="Слайд 3" />
+    </div>
+    <button id="prev-btn"><</button>
+    <button id="next-btn">></button>
+</div>
+
+    <!-- Форма обратной связи -->
+    <form id="contact-form">
+        <input type="text" placeholder="Ваше имя">
+        <input type="email" placeholder="Ваш email">
+        <button id="submit-btn" type="submit">Отправить</button>
+    </form>
+    <p id="success-message" style="display:none;">Форма отправлена!</p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
